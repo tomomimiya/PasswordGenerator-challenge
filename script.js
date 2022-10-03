@@ -6,20 +6,41 @@ var hasSpecialChar = confirm('Would you like special characters?');
 var passwordStr = '';
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var userResponses = getUserResponse();
+
+//Arrays
+var NUMBERS = ['123456789',];
+var LOWERCASE = ['abcdefghijklmnopqrstuvwxyz'];
+var UPPERCASE = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
+var SPCIALCHARACT = ["!%&,*+-./<>?~"];
 
 function getUserResponse() {
   if (hasLowercase === true || hasLowercase) {
     console.log('password has lowercase');
-    // might need to put build password function
-    passwordStr = passwordStr + LOWERCASE[Math.round(Math.random() * LOWERCASE.length)]
+    // might need to put build password function?
+      function buildPassword() {
+        passwordStr = passwordStr + LOWERCASE[Math.round(Math.random() * LOWERCASE.length)]
+    }
   }
+  if (hasUppercase === true || hasLowercase) {
+    console.log('password has uppercase');
 
+    function buildPassword() {
+      passwordStr = passwordStr + UPPERCASE[Math.round(Math.random() * LOWERCASE.length)]
+    }
+  }
+  if (hasSpecialChar === true || hasLowercase) {
+    console.log('password has special character');
+
+    function buildPassword() {
+      passwordStr = passwordStr + SPCIALCHARACT[Math.round(Math.random * SPCIALCHARACT.length)]
+    }
+  }
   return {
     passwordLength,
     hasLowercase,
     hasUppercase,
     hasSpecialChar,
-
   }
 }
 
@@ -27,30 +48,20 @@ function buildPasswordStr() {
   console.log('Building password');
 
   var userResponses = getUserResponse()
-  // Last part of function
-  passElement.textContent = passwordStr
+    //Last part of function
+  passElement.textContent = passwordStr;
 }
 
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+//function buildPasswordStr() {
+// console.log('building password');
 
-  passwordText.value = password;
+//  var passwordStr = buildPasswordStr();
+//  var passElement = document.querySelector("#password");
 
-}
+//  passElement.value = passwordStr;
+//}
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-//Arrays
-var NUMBERS = ['1', '2', '3', '4', '5', '6', '7', '8', '9',];
-var LOWERCASE = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-var UPPERCASE = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-var SPCIALCHARACT = ["!", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?", "~"];
 
-//Windows
-window.alert(`Hello, let's create a password`);
-window.prompt(`how many digits?`);
-
-//loop i=all the arrays?
-for (var i)
+generateBtn.addEventListener ("click", buildPasswordStr);
