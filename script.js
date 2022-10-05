@@ -5,33 +5,35 @@ var hasUppercase = confirm('Would you like uppercase letters?');
 var hasSpecialChar = confirm('Would you like special characters?');
 var passwordStr = '';
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
-var userResponses = getUserResponse();
+var generateBtn = document.querySelector('#generate');
+
+//not sure if i need this here?
+var passwordStr = getUserResponse();
 
 //Arrays
-var NUMBERS = ['123456789',];
-var LOWERCASE = ['abcdefghijklmnopqrstuvwxyz'];
-var UPPERCASE = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
-var SPCIALCHARACT = ["!%&,*+-./<>?~"];
+var NUMBERS = ['1','2','3','4','5','6','7','8','9'];
+var LOWERCASE = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+var UPPERCASE = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+var SPCIALCHARACT = ['!','%','&','*','+','-','.','?','~'];
 
 function getUserResponse() {
   if (hasLowercase === true || hasLowercase) {
-    console.log('password has lowercase');
+    console.log('Password has lowercase');
     // might need to put build password function?
       function buildPassword() {
         passwordStr = passwordStr + LOWERCASE[Math.round(Math.random() * LOWERCASE.length)]
-    }
+      }
   }
-  if (hasUppercase === true || hasLowercase) {
-    console.log('password has uppercase');
 
+  if (hasUppercase === true || hasUppercase) {
+    console.log('Password has uppercase');
     function buildPassword() {
-      passwordStr = passwordStr + UPPERCASE[Math.round(Math.random() * LOWERCASE.length)]
+      passwordStr = passwordStr + UPPERCASE[Math.round(Math.random() * UPPERCASE.length)]
     }
   }
-  if (hasSpecialChar === true || hasLowercase) {
-    console.log('password has special character');
 
+  if (hasSpecialChar === true || hasSpecialChar) {
+    console.log('password has special character');
     function buildPassword() {
       passwordStr = passwordStr + SPCIALCHARACT[Math.round(Math.random * SPCIALCHARACT.length)]
     }
@@ -47,7 +49,7 @@ function getUserResponse() {
 function buildPasswordStr() {
   console.log('Building password');
 
-  var userResponses = getUserResponse()
+  var passwordStr = getUserResponse();
     //Last part of function
   passElement.textContent = passwordStr;
 }
