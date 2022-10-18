@@ -1,8 +1,19 @@
 # PasswordGenerator-challenge
 Module03 Javascript password generator challenge
+
 ### links
-GitHub repo https://github.com/tomomimiya/PasswordGenerator-challenge.git
-Deployable link https://tomomimiya.github.io/PasswordGenerator-challenge/
+
+GitHub repo - https://github.com/tomomimiya/PasswordGenerator-challenge.git
+
+Deployable link - https://tomomimiya.github.io/PasswordGenerator-challenge/
+
+### Images
+![project screenshot](Assets/Screen%20Shot%202022-10-17%20at%2011.32.31%20PM.png)
+![project screenshot](Assets/Screen%20Shot%202022-10-17%20at%2011.54.12%20PM.png)
+![project screenshot](Assets/Screen%20Shot%202022-10-17%20at%2011.54.29%20PM.png)
+![project screenshot](Assets/Screen%20Shot%202022-10-17%20at%2011.54.39%20PM.png)
+![project screenshot](Assets/Screen%20Shot%202022-10-17%20at%2011.54.59%20PM.png)
+
 
 
 ## User Story
