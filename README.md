@@ -1,5 +1,7 @@
 # PasswordGenerator-challenge
 Module03 Javascript password generator challenge
+### links
+<link href = "https://github.com/tomomimiya/PasswordGenerator-challenge.git">GitHub repo<link>
 
 ## User Story
 AS AN employee with access to sensitive data
